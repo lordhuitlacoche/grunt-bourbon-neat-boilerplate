@@ -36,7 +36,9 @@ All CSS dependencies are imported at <code>src > css > main.scss</code>.
 ### JavaScript
 RequireJS handles all dependencies and are defined at <code>src > js > config.js</code> and included at <code>src > js > app.js</code>.
 
-## Build for Production
+## Build
+### Grunt
+The default <code>grunt</code> tasks will start the development build and will watch your files for updates.
 
 ### Grunt Build
 When you're ready to build for production simply run: <code>grunt build</code> and your files will be minified under the <code>_public</code> directory.
