@@ -69,43 +69,24 @@ module.exports = function(grunt) {
           name: "app",
           baseUrl: "src/js",
           mainConfigFile: "src/js/config.js",
-          out: "<%= globalConfig.destination  %>/js/main.js",
-          include: ['../../node_modules/grunt-contrib-requirejs/node_modules/requirejs/require.js']
+          include: "../..//node_modules/grunt-requirejs/node_modules/requirejs/require.js",
+          out: "<%= globalConfig.destination  %>/js/main.js"
         }
       }
     },
 
     modernizr: {
-
-        // [REQUIRED] Path to the build you're using for development.
-        "devFile" : "<%= globalConfig.source  %>/js/app.js",
-
-        // [REQUIRED] Path to save out the built file.
-        "outputFile" : "<%= globalConfig.destination  %>/js/modernizr.js",
-
-        // Based on default settings on http://modernizr.com/download/
-        "extra" : {
-            "shiv" : true,
-            "printshiv" : false,
-            "load" : true,
-            "mq" : false,
-            "cssclasses" : true
-        },
-
-        // Based on default settings on http://modernizr.com/download/
-        "extensibility" : {
-            "addtest" : false,
-            "prefixed" : false,
-            "teststyles" : false,
-            "testprops" : false,
-            "testallprops" : false,
-            "hasevents" : false,
-            "prefixes" : false,
-            "domprefixes" : false
-        },
-
-        // By default, source is uglified before saving
-        "uglify" : false
+        dist: {
+          "crawl": false,
+          "dest": "<%= globalConfig.destination  %>/js/modernizr.js",
+          "tests": [
+            "canvas"
+          ],
+          "options": [
+            "setClasses"
+          ],
+          "uglify": false
+          }
     },
 
     uglify: {
@@ -201,14 +182,16 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-mkdir');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-requirejs');
   grunt.loadNpmTasks("grunt-modernizr");
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('node-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('assemble' );
+  grunt.loadNpmTasks('grunt-assemble');
   grunt.loadNpmTasks('grunt-newer' );
 
   // Default
