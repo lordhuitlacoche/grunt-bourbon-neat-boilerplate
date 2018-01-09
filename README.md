@@ -1,5 +1,5 @@
 # grunt-bourbon-neat-boilerplate
-his boilerplate runs on [Grunt](http://gruntjs.com/) and [Bower](http://bower.io/), which depend on [Node](http://nodejs.org/) and [npm](http://npmjs.org/). Ensure that you have Node and npm installed before you begin. Additionally, this project utilizes the following libraries:
+This boilerplate runs on [Grunt](http://gruntjs.com/) and [Bower](http://bower.io/), which depend on [Node](http://nodejs.org/) and [npm](http://npmjs.org/). Ensure that you have Node and npm installed before you begin. Additionally, this project utilizes the following libraries:
 - [Assemble](http://assemble.io/)
 - [Bourbon](http://bourbon.io/)
 - [Neat](http://neat.bourbon.io/)
