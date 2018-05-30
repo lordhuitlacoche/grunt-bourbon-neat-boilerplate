@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "devDependencies": {
     "assemble": "~0.24.3",
-    "grunt": "~1.0.1",
+    "grunt": "~1.0.2",
     "grunt-assemble": "^0.6.3",
     "grunt-contrib-clean": "~1.1.0",
     "grunt-contrib-connect": "~1.0.2",
